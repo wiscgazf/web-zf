@@ -1,46 +1,26 @@
-# Getting Started with Create React App
+## web-zf
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### yarn start
+本地开发环境
 
-## Available Scripts
+### yarn test
+测试环境
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### yarn build
+线上环境
 
 ### `yarn eject`
+配置弹出 自定义（不建议）
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### git 提交说明
+```
+feat: 添加新特性
+fix: 修复 bug
+docs: 仅仅修改了文档
+style: 仅仅修改了空格、格式缩进、都好等等，不改变代码逻辑
+refactor: 代码重构，没有加新功能或者修复 bug
+perf: 增加代码进行性能测试
+test: 增加测试用例
+chore: 改变构建流程、或者增加依赖库、工具等
+revert: 当前 commit 用于撤销以前的 commit
+```
