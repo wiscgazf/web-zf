@@ -1,4 +1,7 @@
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+
 const {
     override, // 主函数
     fixBabelImports, // 配置按需加载
@@ -9,6 +12,20 @@ const {
 const rewiredMap = () => config => {
     // config为所有的webpack配置
     // config.devtool = config.mode === 'development' ? 'cheap-module-source-map' : false;
+
+    // 去除注释、多进程打包压缩
+    config.plugins = [...config.plugins,
+        new UglifyJsPlugin({
+            uglifyOptions: {
+                warnings: false,
+                compress: {
+                    drop_debugger: true,
+                    drop_console: true
+                }
+            }
+        }),
+        new HardSourceWebpackPlugin()
+    ];
     return config;
 };
 
@@ -27,7 +44,7 @@ module.exports = override(
         }
     }),
     addWebpackAlias({
-        '@': path.resolve(__dirname, './src')
+        '@': path.resolve(__dirname, 'src')
     }),
     rewiredMap()
 );
