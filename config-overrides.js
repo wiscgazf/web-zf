@@ -1,4 +1,9 @@
 const path = require('path');
+
+// 修改打包路径除了output，这里也要修改
+const paths = require('react-scripts/config/paths');
+paths.appBuild = path.join(path.dirname(paths.appBuild), 'dist');
+
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
@@ -9,12 +14,15 @@ const {
     addLessLoader // lessLoader 配置，可更改主题色等
 } = require('customize-cra');
 
-const rewiredMap = () => config => {
+const rewiredMap = () => (config) => {
     // config为所有的webpack配置
     // config.devtool = config.mode === 'development' ? 'cheap-module-source-map' : false;
 
+    config.output.path = path.resolve(__dirname, 'dist');
+
     // 去除注释、多进程打包压缩
-    config.plugins = [...config.plugins,
+    config.plugins = [
+        ...config.plugins,
         new UglifyJsPlugin({
             uglifyOptions: {
                 warnings: false,
@@ -26,6 +34,7 @@ const rewiredMap = () => config => {
         }),
         new HardSourceWebpackPlugin()
     ];
+
     return config;
 };
 

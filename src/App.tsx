@@ -1,28 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.less';
-import {Button} from 'antd';
+import logo from '@/assets/images/logo.svg';
+import { Button } from 'antd';
+import Test from '@/components/Test';
+
+import Appcss from './App.module.less';
 
 function App() {
-  return (
-    <div className="App">
-        <Button type='primary'>has</Button>
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-                Edit <code>src/App.tsx</code> and save to reload.
-            </p>
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Learn React
-            </a>
-        </header>
-    </div>
-  );
+    return (
+        <div className={Appcss.App}>
+            <Button type="primary">你好</Button>
+            <Test />
+            <img src={logo} alt="" />
+        </div>
+    );
 }
 
 export default App;

@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ConfigProvider, Empty } from 'antd';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// 国际化
+import zhCN from 'antd/es/locale/zh_CN';
+import 'moment/locale/zh-cn';
+
+// polyfill
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <ConfigProvider locale={zhCN} renderEmpty={() => Empty}>
+            <App />
+        </ConfigProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
