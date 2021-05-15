@@ -28,7 +28,7 @@ const rewiredMap = () => (config) => {
                 warnings: false,
                 compress: {
                     drop_debugger: true,
-                    drop_console: true
+                    drop_console: process.env.NODE_ENV === 'development' ? false : true
                 }
             }
         }),

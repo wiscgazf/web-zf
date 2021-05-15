@@ -39,6 +39,7 @@ module.exports = {
         'no-unused-vars': 'error',
         'react/no-unstable-nested-components': 'off',
         'object-curly-spacing': ['error', 'always'],
-        'spaced-comment': 'off'
+        'spaced-comment': 'off',
+        'no-console': 'off'
     }
 };
