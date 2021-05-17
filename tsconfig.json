@@ -19,8 +19,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "allowUmdGlobalAccess": true
   },
+  "compileOnSave": true,
   "extends": "./paths.json",
   "include": [
     "src"

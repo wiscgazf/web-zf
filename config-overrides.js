@@ -20,6 +20,8 @@ const rewiredMap = () => (config) => {
 
     config.output.path = path.resolve(__dirname, 'dist');
 
+    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx'];
+
     // 去除注释、多进程打包压缩
     config.plugins = [
         ...config.plugins,

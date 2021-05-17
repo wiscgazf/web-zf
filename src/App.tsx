@@ -1,14 +1,9 @@
 import React from 'react';
-import Test from '@/components/Test';
-
-import Appcss from './App.module.less';
+import Routes from '@/components/RouteConfig';
+// import Test from '@/components/Test';
 
 function App() {
-    return (
-        <div className={Appcss.App}>
-            <Test />
-        </div>
-    );
+    return <Routes />;
 }
 
 export default App;
