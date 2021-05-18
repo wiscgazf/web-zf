@@ -42,7 +42,7 @@ module.exports = {
                 extensions: ['.js', '.jsx', '.tsx', '.ts']
             }
         ],
-        indent: ['error', 4],
+        indent: ['error', 4, { SwitchCase: 1 }],
         eqeqeq: [2, 'allow-null'],
         quotes: [2, 'single'],
         'comma-dangle': ['error'],

@@ -51,6 +51,7 @@
     "@commitlint/config-conventional": "^12.1.4",
     "@types/react-loadable": "^5.5.5",
     "@types/react-router-dom": "^5.1.7",
+    "@types/redux-logger": "^3.0.8",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@typescript-eslint/parser": "^4.23.0",
     "babel-eslint": "^10.1.0",
@@ -72,7 +73,9 @@
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
     "react-app-rewired": "^2.1.8",
+    "react-hot-loader": "^4.13.0",
     "react-loadable": "^5.5.0",
+    "redux-devtools-extension": "^2.13.9",
     "uglifyjs-webpack-plugin": "^2.2.0"
   },
   "lint-staged": {
