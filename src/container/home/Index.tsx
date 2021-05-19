@@ -6,11 +6,12 @@
  * @LastEditors: zf
  * @LastEditTime: 2021-05-17 19:22:06
  */
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'antd';
 import { actions, IState } from '@/store/module/user';
 import { Link, withRouter, RouterProps } from 'react-router-dom';
+import * as Api from '@/api/user';
 
 import './Index.less';
 
@@ -24,6 +25,12 @@ const Home: FC<RouterProps> = (props) => {
     // 用户信息
     const userInfo = useSelector(({ user }: { user: IState }) => user.userInfo);
     console.log(userInfo);
+
+    useEffect(() => {
+        Api.home({}).then((res) => {
+            console.log(res);
+        });
+    }, []);
 
     const unBlock = props.history.block(() => {
         if (status) {

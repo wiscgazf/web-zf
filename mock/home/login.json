@@ -1,0 +1,17 @@
+{
+  "code":"200",
+  "msg":"OK",
+  "data":{
+    "token":"1598346778397WTtT5/wV7jvdeSTDtbRlJQ==",
+    "user":{
+      "realName":"测试",
+      "mobile":"18501050054",
+      "email":"ceshi@163.com",
+      "regionName":"区域名称",
+      "regionCode":"region",
+      "campusName":"校区名称",
+      "campusCode":"campus",
+      "userCode": "VIP-Code"
+    }
+  }
+}

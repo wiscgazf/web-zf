@@ -43,6 +43,7 @@ module.exports = {
             }
         ],
         indent: ['error', 4, { SwitchCase: 1 }],
+        'multiline-ternary': [1, 'always'],
         eqeqeq: [2, 'allow-null'],
         quotes: [2, 'single'],
         'comma-dangle': ['error'],
